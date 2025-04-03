@@ -6,6 +6,7 @@ body {
   font-family: Arial, sans-serif;
   color: white;
   text-align: center;
+  box-sizing: border-box;
 }
 
 /* Logo Styles */
@@ -14,7 +15,8 @@ body {
   top: 20px;
   right: 20px;
   max-width: 150px;
-  width: auto;
+  width: 100%; /* Ajusta a logo proporcionalmente */
+  height: auto; /* Mantém a proporção da imagem */
 }
 
 /* Container with the background image */
@@ -24,6 +26,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-size: cover;
+  background-position: center;
 }
 
 /* Content div for text and button */
@@ -32,8 +36,11 @@ body {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(180, 245, 250, 0.3)); 
   padding: 20px 40px;
   border-radius: 8px;
+  max-width: 90%; /* Garante que o conteúdo não fique grande demais */
+  margin: 0 auto;
 }
 
+/* Content Heading */
 .content h2 {
   margin-bottom: 20px;
 }
@@ -47,6 +54,8 @@ button {
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
 button:hover {
@@ -74,6 +83,8 @@ input {
   font-size: 16px;
   margin-top: 10px;
   width: 250px;
+  max-width: 100%; /* Garante que a caixa de entrada não ultrapasse a largura */
+  box-sizing: border-box;
 }
 
 footer {
@@ -81,3 +92,49 @@ footer {
   font-size: 14px;
   color: #B0C4DE;
 }
+
+/* Media Queries for Responsiveness */
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .container {
+    background-position: top; /* Ajusta a imagem de fundo para a parte superior em telas pequenas */
+  }
+
+  .content {
+    padding: 15px;
+    width: 90%;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+
+  input {
+    width: 80%; /* Faz com que a caixa de entrada ocupe mais espaço em telas pequenas */
+  }
+
+  .logo {
+    top: 10px;
+    right: 10px;
+    max-width: 100px; /* Reduz a logo em telas menores */
+  }
+}
+
+/* Tablets (em tela entre 768px e 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .content {
+    padding: 20px 30px;
+  }
+
+  input {
+    width: 80%;
+  }
+
+  button {
+    font-size: 1.1em;
+    padding: 9px 18px;
+  }
+}
+
