@@ -1,4 +1,4 @@
-/* Estilo Global */
+/* Estilos globais */
 body {
   background-color: black;
   margin: 0;
@@ -8,6 +8,7 @@ body {
   text-align: center;
   box-sizing: border-box;
   height: 100vh;
+  overflow: hidden;
 }
 
 /* Logo */
@@ -21,28 +22,26 @@ body {
   z-index: 10;
 }
 
-/* Container com a imagem de fundo inteira */
+/* Container com imagem de fundo */
 .container {
-  background: url('https://i.postimg.cc/Ssy1c2cJ/4ba91ff4-4390-4be7-abc2-1956b60cf440.jpg') no-repeat center center;
-  background-size: contain; /* Mostra a imagem inteira sem cortar */
-  background-repeat: no-repeat;
-  background-color: black; /* Fundo preto para completar a tela */
   width: 100vw;
   height: 100vh;
-
+  background: url('https://i.postimg.cc/Ssy1c2cJ/4ba91ff4-4390-4be7-abc2-1956b60cf440.jpg') no-repeat center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Conteúdo central */
+/* Conteúdo */
 .content {
   text-align: center;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 20px 40px;
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 20px 30px;
   border-radius: 8px;
   max-width: 90%;
-  margin: 0 auto;
   z-index: 5;
 }
 
@@ -68,7 +67,7 @@ button:hover {
   background-color: #1ABC9C;
 }
 
-/* Input */
+/* Campo de entrada */
 input {
   padding: 10px;
   font-size: 16px;
@@ -91,11 +90,11 @@ footer {
   color: #B0C4DE;
 }
 
-/* Responsividade (não estica nem corta) */
+/* Responsivo para celulares */
 @media (max-width: 768px) {
   .container {
     background-size: contain;
-    background-position: center;
+    background-position: center center;
   }
 
   .logo {
@@ -106,5 +105,15 @@ footer {
 
   .content {
     padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  input {
+    width: 80%;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 1em;
   }
 }
