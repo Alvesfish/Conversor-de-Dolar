@@ -30,10 +30,11 @@ body {
   background-size: cover;
 }
 
-/* Ajuste para garantir cobertura total no celular */
+/* Ajuste para dispositivos móveis */
 @media (max-width: 768px) {
   .container {
-    background-size: 100% 100%;
+    background-size: contain; /* Garante que a imagem não fique esticada */
+    background-position: center; /* Mantém o símbolo do dólar no centro */
   }
 }
 
