@@ -1,13 +1,17 @@
 /* Estilos globais */
-body {
-  background-color: black;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
   font-family: Arial, sans-serif;
   color: white;
   text-align: center;
-  box-sizing: border-box;
-  height: 100vh;
+  background-color: black;
   overflow: hidden;
 }
 
@@ -22,23 +26,22 @@ body {
   z-index: 10;
 }
 
-/* Container com imagem de fundo */
+/* Container com a imagem em tela cheia */
 .container {
-  width: 100vw;
   height: 100vh;
-  background: url('https://i.postimg.cc/Ssy1c2cJ/4ba91ff4-4390-4be7-abc2-1956b60cf440.jpg') no-repeat center center;
-  background-size: contain;
+  width: 100vw;
+  background-image: url('https://i.postimg.cc/Ssy1c2cJ/4ba91ff4-4390-4be7-abc2-1956b60cf440.jpg');
   background-repeat: no-repeat;
-  background-position: center center;
+  background-size: cover;         /* Preenche a tela */
+  background-position: center;    /* Centraliza a imagem */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Conteúdo */
+/* Caixa com conteúdo */
 .content {
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 20px 30px;
   border-radius: 8px;
   max-width: 90%;
@@ -70,50 +73,4 @@ button:hover {
 /* Campo de entrada */
 input {
   padding: 10px;
-  font-size: 16px;
-  margin-top: 10px;
-  width: 250px;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-/* Resultado */
-#resultado {
-  margin-top: 20px;
-  font-size: 20px;
-}
-
-/* Rodapé */
-footer {
-  margin-top: 50px;
-  font-size: 14px;
-  color: #B0C4DE;
-}
-
-/* Responsivo para celulares */
-@media (max-width: 768px) {
-  .container {
-    background-size: contain;
-    background-position: center center;
-  }
-
-  .logo {
-    top: 10px;
-    right: 10px;
-    max-width: 100px;
-  }
-
-  .content {
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-
-  input {
-    width: 80%;
-  }
-
-  button {
-    padding: 8px 16px;
-    font-size: 1em;
-  }
-}
+  font-size
