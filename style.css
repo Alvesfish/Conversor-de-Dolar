@@ -1,4 +1,4 @@
-/* Estilos globais */
+/* Estilo Global */
 body {
   background-color: black;
   margin: 0;
@@ -7,6 +7,7 @@ body {
   color: white;
   text-align: center;
   box-sizing: border-box;
+  height: 100vh;
 }
 
 /* Logo */
@@ -17,38 +18,35 @@ body {
   max-width: 150px;
   width: 100%;
   height: auto;
+  z-index: 10;
 }
 
-/* Container com imagem de fundo */
+/* Container com a imagem de fundo inteira */
 .container {
   background: url('https://i.postimg.cc/Ssy1c2cJ/4ba91ff4-4390-4be7-abc2-1956b60cf440.jpg') no-repeat center center;
+  background-size: contain; /* Mostra a imagem inteira sem cortar */
+  background-repeat: no-repeat;
+  background-color: black; /* Fundo preto para completar a tela */
   width: 100vw;
   height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  background-size: cover;
 }
 
-/* Ajuste para dispositivos móveis */
-@media (max-width: 768px) {
-  .container {
-    background-size: contain; /* Garante que a imagem não fique esticada */
-    background-position: center; /* Mantém o símbolo do dólar no centro */
-  }
-}
-
-/* Estilo do conteúdo */
+/* Conteúdo central */
 .content {
   text-align: center;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(180, 245, 250, 0.3));
+  background: rgba(0, 0, 0, 0.6);
   padding: 20px 40px;
   border-radius: 8px;
   max-width: 90%;
   margin: 0 auto;
+  z-index: 5;
 }
 
-/* Estilo do título */
+/* Título */
 .content h2 {
   margin-bottom: 20px;
 }
@@ -70,7 +68,7 @@ button:hover {
   background-color: #1ABC9C;
 }
 
-/* Campo de entrada */
+/* Input */
 input {
   padding: 10px;
   font-size: 16px;
@@ -80,9 +78,33 @@ input {
   box-sizing: border-box;
 }
 
+/* Resultado */
+#resultado {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
 /* Rodapé */
 footer {
   margin-top: 50px;
   font-size: 14px;
   color: #B0C4DE;
+}
+
+/* Responsividade (não estica nem corta) */
+@media (max-width: 768px) {
+  .container {
+    background-size: contain;
+    background-position: center;
+  }
+
+  .logo {
+    top: 10px;
+    right: 10px;
+    max-width: 100px;
+  }
+
+  .content {
+    padding: 15px;
+  }
 }
