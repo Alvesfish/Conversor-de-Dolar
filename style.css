@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Estilos globais */
 body {
   background-color: black;
   margin: 0;
@@ -9,7 +9,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Logo Styles */
+/* Logo */
 .logo {
   position: absolute;
   top: 20px;
@@ -17,21 +17,27 @@ body {
   max-width: 150px;
   width: 100%;
   height: auto;
-  display: block;
 }
 
-/* Container with the background image */
+/* Container com imagem de fundo */
 .container {
-  background: url('https://i.postimg.cc/Ssy1c2cJ/4ba91ff4-4390-4be7-abc2-1956b60cf440.jpg') no-repeat center center/cover;
-  min-height: 100vh;
+  background: url('https://i.postimg.cc/Ssy1c2cJ/4ba91ff4-4390-4be7-abc2-1956b60cf440.jpg') no-repeat center center;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-size: cover;
-  background-position: center;
 }
 
-/* Content box */
+/* Ajuste para garantir cobertura total no celular */
+@media (max-width: 768px) {
+  .container {
+    background-size: 100% 100%;
+  }
+}
+
+/* Estilo do conteúdo */
 .content {
   text-align: center;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(180, 245, 250, 0.3));
@@ -41,12 +47,12 @@ body {
   margin: 0 auto;
 }
 
-/* Text Styles */
+/* Estilo do título */
 .content h2 {
   margin-bottom: 20px;
 }
 
-/* Button Styles */
+/* Botão */
 button {
   background-color: #00BFFF;
   border: none;
@@ -63,26 +69,7 @@ button:hover {
   background-color: #1ABC9C;
 }
 
-/* Footer Styles */
-footer {
-  text-align: center;
-  padding: 10px;
-  margin-top: 50px;
-  font-size: 14px;
-  color: #B0C4DE;
-}
-
-/* Resultado */
-#resultado {
-  margin-top: 20px;
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 5px;
-  display: inline-block;
-  color: white;
-}
-
-/* Input Styles */
+/* Campo de entrada */
 input {
   padding: 10px;
   font-size: 16px;
@@ -92,48 +79,9 @@ input {
   box-sizing: border-box;
 }
 
-/* Responsividade */
-
-/* Mobile */
-@media (max-width: 768px) {
-  .container {
-    background-size: contain; /* 👈 Corrige o corte da imagem */
-    background-position: top;
-  }
-
-  .content {
-    padding: 15px;
-    width: 90%;
-  }
-
-  button {
-    font-size: 1em;
-    padding: 8px 16px;
-  }
-
-  input {
-    width: 80%;
-  }
-
-  .logo {
-    top: 10px;
-    right: 10px;
-    max-width: 100px;
-  }
-}
-
-/* Tablet */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .content {
-    padding: 20px 30px;
-  }
-
-  input {
-    width: 80%;
-  }
-
-  button {
-    font-size: 1.1em;
-    padding: 9px 18px;
-  }
+/* Rodapé */
+footer {
+  margin-top: 50px;
+  font-size: 14px;
+  color: #B0C4DE;
 }
