@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
     <title>Conversor de Moeda</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"> <!-- Link para o CSS -->
   </head>
   <body>
-    <img src="https://i.postimg.cc/GpCxYmvc/title.png" alt="Logo" class="logo" />
+    <img src="https://i.postimg.cc/GpCxYmvc/title.png" alt="Logo" class="logo">
 
     <div class="container">
       <div class="content">
         <h2>Quem ganha, ganha em Dólar!</h2>
         <p>Que tal converter esse valor em reais?</p>
 
+        <!-- Campo para valor em dólar -->
         <input type="number" id="valordolar" placeholder="Digite o valor em Dólares" />
+
+        <!-- Botão para conversão -->
         <button onclick="conversor()">Converter</button>
 
+        <!-- Resultado da conversão -->
         <div id="resultado"></div>
       </div>
     </div>
 
     <footer>Alura - Imersão DEV - 2025</footer>
-    <script src="script.js"></script>
+
+    <script src="script.js"></script> <!-- Importando o script -->
   </body>
 </html>
