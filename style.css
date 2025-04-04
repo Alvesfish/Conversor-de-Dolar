@@ -15,8 +15,9 @@ body {
   top: 20px;
   right: 20px;
   max-width: 150px;
-  width: 100%; /* Ajusta a logo proporcionalmente */
-  height: auto; /* Mantém a proporção da imagem */
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Container with the background image */
@@ -30,17 +31,17 @@ body {
   background-position: center;
 }
 
-/* Content div for text and button */
+/* Content box */
 .content {
   text-align: center;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(180, 245, 250, 0.3)); 
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(180, 245, 250, 0.3));
   padding: 20px 40px;
   border-radius: 8px;
-  max-width: 90%; /* Garante que o conteúdo não fique grande demais */
+  max-width: 90%;
   margin: 0 auto;
 }
 
-/* Content Heading */
+/* Text Styles */
 .content h2 {
   margin-bottom: 20px;
 }
@@ -66,9 +67,12 @@ button:hover {
 footer {
   text-align: center;
   padding: 10px;
+  margin-top: 50px;
+  font-size: 14px;
+  color: #B0C4DE;
 }
 
-/* Result Display Styles */
+/* Resultado */
 #resultado {
   margin-top: 20px;
   font-size: 20px;
@@ -78,27 +82,23 @@ footer {
   color: white;
 }
 
+/* Input Styles */
 input {
   padding: 10px;
   font-size: 16px;
   margin-top: 10px;
   width: 250px;
-  max-width: 100%; /* Garante que a caixa de entrada não ultrapasse a largura */
+  max-width: 100%;
   box-sizing: border-box;
 }
 
-footer {
-  margin-top: 50px;
-  font-size: 14px;
-  color: #B0C4DE;
-}
+/* Responsividade */
 
-/* Media Queries for Responsiveness */
-
-/* Mobile devices */
+/* Mobile */
 @media (max-width: 768px) {
   .container {
-    background-position: top; /* Ajusta a imagem de fundo para a parte superior em telas pequenas */
+    background-size: contain; /* 👈 Corrige o corte da imagem */
+    background-position: top;
   }
 
   .content {
@@ -112,17 +112,17 @@ footer {
   }
 
   input {
-    width: 80%; /* Faz com que a caixa de entrada ocupe mais espaço em telas pequenas */
+    width: 80%;
   }
 
   .logo {
     top: 10px;
     right: 10px;
-    max-width: 100px; /* Reduz a logo em telas menores */
+    max-width: 100px;
   }
 }
 
-/* Tablets (em tela entre 768px e 1024px) */
+/* Tablet */
 @media (max-width: 1024px) and (min-width: 769px) {
   .content {
     padding: 20px 30px;
@@ -137,4 +137,3 @@ footer {
     padding: 9px 18px;
   }
 }
-
