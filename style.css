@@ -1,15 +1,16 @@
-/* Reset básico */
+/* Estilos globais */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  width: 100%;
+body, html {
   height: 100%;
+  width: 100%;
   font-family: Arial, sans-serif;
   color: white;
+  text-align: center;
   background-color: black;
   overflow: hidden;
 }
@@ -25,27 +26,31 @@ html, body {
   z-index: 10;
 }
 
-/* Container com imagem completa visível */
+/* Container com a imagem em tela cheia */
 .container {
-  width: 100vw;
   height: 100vh;
+  width: 100vw;
   background-image: url('https://i.postimg.cc/Ssy1c2cJ/4ba91ff4-4390-4be7-abc2-1956b60cf440.jpg');
   background-repeat: no-repeat;
-  background-size: contain;  /* Mostra a imagem completa */
-  background-position: center center;
-  background-color: black;  /* Preenche as bordas caso a imagem não cubra tudo */
+  background-size: cover;         /* Preenche a tela */
+  background-position: center;    /* Centraliza a imagem */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Caixa de conteúdo */
+/* Caixa com conteúdo */
 .content {
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 20px 30px;
   border-radius: 8px;
   max-width: 90%;
   z-index: 5;
+}
+
+/* Título */
+.content h2 {
+  margin-bottom: 20px;
 }
 
 /* Botão */
@@ -56,22 +61,23 @@ button {
   font-size: 1.2em;
   color: white;
   cursor: pointer;
+  transition: background-color 0.3s ease;
   border-radius: 5px;
   margin-top: 10px;
-  transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #1ABC9C;
 }
 
-/* Input */
+/* Campo de entrada */
 input {
   padding: 10px;
   font-size: 16px;
   margin-top: 10px;
   width: 250px;
   max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* Resultado */
@@ -80,24 +86,25 @@ input {
   font-size: 20px;
 }
 
-/* Footer */
+/* Rodapé */
 footer {
   margin-top: 50px;
   font-size: 14px;
   color: #B0C4DE;
 }
 
-/* Responsivo para celular */
+/* Responsivo */
 @media (max-width: 768px) {
   .container {
-    background-size: contain;  /* Garante que a imagem apareça inteira */
+    background-size: contain; /* Mostra a imagem inteira sem cortar */
     background-position: center center;
+    background-color: black;
   }
 
   .logo {
-    max-width: 100px;
     top: 10px;
     right: 10px;
+    max-width: 100px;
   }
 
   .content {
@@ -110,7 +117,7 @@ footer {
   }
 
   button {
-    font-size: 1em;
     padding: 8px 16px;
+    font-size: 1em;
   }
 }
