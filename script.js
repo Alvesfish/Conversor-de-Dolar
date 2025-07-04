@@ -6,7 +6,7 @@ function conversor() {
   // Verifica se o valor inserido é numérico e não está vazio
   if (valordolar && !isNaN(valordolar) && valordolar > 0) {
     // Taxa de câmbio (pode ser ajustada)
-    let taxadecambio = 5.66;
+    let taxadecambio = 5.42;
     
     // Calcula o valor convertido
     let valorconvertido = valordolar * taxadecambio;
